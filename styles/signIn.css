@@ -1,144 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  font-family: "HM Sans Regular", "Hiragino Kaku Gothic Pro", Osaka,
+    sans-serif;
+  font-size: 0.9135rem;
+}
+#container {
+  border: 2px solid black;
+  width: 30%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 30px;
+}
+#first {
+  /* border: 1px solid red; */
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+#second {
+  /* border:1px solid blue; */
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+}
+#second > input {
+  width: 98%;
+  height: 50px;
+}
+#third {
+  /* border: 1px solid green; */
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  margin-top: 10px;
+  gap: 48%;
+}
+#check {
+  margin-top: 10px;
+}
+
+#fourth {
+  /* border: 1px solid brown; */
+  width: 100%;
+  margin: auto;
+}
+#fourth > button {
+  width: 100.3%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#sign {
+  margin-top: 10px;
+  border: 1px black;
+  background-color: black;
+  color: white;
+}
+#mem {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+#info {
+  text-align: center;
+}
+.toflex {
+  display: flex;
+}
+@media only screen and (min-width:500px) and (max-width:900px){
+  #container{
+    width: 60%;
   }
-  
-  #become{
-      text-align: center;
+}
+@media only screen and (min-width:0px) and (max-width:500px){
+  #container{
+    width: 60%;
   }
-  body{
-    height: 100vh;
-    width: 100%;
-    background: gainsboro;
-  }
-  .show-btn{
-    background: #fff;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 500;
-    color: black;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-  }
-  .show-btn, .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  input[type="checkbox"]{
-    display: none;
-  }
-  .container{
-    display: none;
-    background: #fff;
-    width: 410px;
-    padding: 30px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-  #show:checked ~ .container{
-    display: block;
-  }
-  .container .close-btn{
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  .container .close-btn:hover{
-    color: black;
-    /* border: 1px solid red; */
-  }
-  .container .text{
-    font-size: 25px;
-    font-weight: 400;
-    text-align: center;
-  }
-  .container form{
-    margin-top: -20px;
-  }
-  .container form .data{
-    height: 45px;
-    width: 100%;
-    margin: 40px 0;
-  }
-  form .data label{
-    font-size: 18px;
-  }
-  form .data input{
-    height: 100%;
-    width: 100%;
-    padding-left: 10px;
-    font-size: 17px;
-    border: 1px solid silver;
-  }
-  #fp{
-      text-align: right;
-  }
-  form .data input:focus{
-    border-color: black;
-    border-bottom-width: 2px;
-  }
-  form .forgot-pass{
-    margin-top: -8px;
-    align-items: right;
-  }
-  form .forgot-pass a{
-    color:black;
-    text-decoration: none;
-    padding-bottom: 20px;
-    font-family: "HM Sans Regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    font-weight: bolder;
-  }
-  form  .tc a{
-      color: grey;
-      text-decoration: none;
-  }
-  form .forgot-pass a:hover{
-    text-decoration: underline;
-  }
-  form .btn{
-    margin: 30px 0;
-    height: 45px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  form .btn .inner{
-    height: 100%;
-    width: 300%;
-    position: absolute;
-    left: -100%;
-    z-index: -1;
-    background: black;
-    transition: all 0.4s;
-  }
-  form .btn:hover .inner{
-    left: 0;
-  }
-  form .btn button{
-    height: 100%;
-    width: 100%;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-  }
-  form .signup-link{
-    text-align: center;
-  }
-  form .signup-link a{
-    color: black;
-    text-decoration: none;
-  }
-  form .signup-link a:hover{
-    text-decoration: underline;
-  }
+}
