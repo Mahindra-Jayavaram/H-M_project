@@ -1,43 +1,144 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device, initial-scale=1.0" />
+    <title>H&M Login Page</title>
+    <style>
+      * {
+        font-family: "HM Sans Regular", "Hiragino Kaku Gothic Pro", Osaka,
+          sans-serif;
+        font-size: 0.9135rem;
+      }
+      #container {
+        border: 2px solid black;
+        width: 30%;
+        margin: auto;
+        margin-top: 100px;
+        padding: 30px;
+      }
+      #first {
+        /* border: 1px solid red; */
+        width: 100%;
+        margin: auto;
+        text-align: center;
+      }
+      #second {
+        /* border:1px solid blue; */
+        width: 100%;
+        margin: auto;
+        margin-top: 40px;
+      }
+      #second > input {
+        width: 98%;
+        height: 50px;
+      }
+      #third {
+        /* border: 1px solid green; */
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        margin-top: 10px;
+        gap: 48%;
+      }
+      #check {
+        margin-top: 10px;
+      }
 
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Sign up or Sign in shanmukhh</title>
-      <link rel="stylesheet" href="/styles/signIn.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   
-    </head>
-   <body>
-      <div class="center">
-         <input type="checkbox" id="show">
-         <label for="show" class="show-btn">Signin-SignUp</label>
-         <div class="container">
-            <label for="show" class="close-btn fas fa-times" title="close"></label>
-            <div class="text">
-             Sign in
-            </div>
-            <div id="become">Become a member — don’t miss out on deals, offers, discounts and bonus vouchers.</div>
-            <form action="#">
-               <div class="data">
-                  <label>Email or Phone</label>
-                  <input type="text" required>
-               </div>
-               <div class="data">
-                  <label>Password</label>
-                  <input type="password" required>
-               </div>
-               <div class="forgot-pass">
-                  <a href="#" id="fp">Forgot Password<span style="color: black;">?</span></a>
-               </div>
-              
-               <div class="btn">
-                  <div class="inner"></div>
-                  <button type="submit">login</button>
-               </div>
-               
-            </form>
-         </div>
+      #fourth {
+        /* border: 1px solid brown; */
+        width: 100%;
+        margin: auto;
+      }
+      #fourth > button {
+        width: 100.3%;
+        height: 50px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      #sign {
+        margin-top: 10px;
+        border: 1px black;
+        background-color: black;
+        color: white;
+      }
+      #mem {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        border: 1px solid black;
+        background-color: transparent;
+      }
+      #info {
+        text-align: center;
+      }
+      .toflex {
+        display: flex;
+      }
+      @media only screen and (min-width:500px) and (max-width:900px){
+        #container{
+          width: 60%;
+        }
+      }
+      @media only screen and (min-width:0px) and (max-width:500px){
+        #container{
+          width: 60%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style="text-align: center; color: red;">H&M</h1>
+                <div class="box">
+                    <h2 style="margin-left:45px;">Log in</h2>
+                    <div><label>Email(Phone for mobile accounts)</label></div>
+                    <div class="in"><input id="email" type="text"/></div>
+                    <div><label>Password</label></div>
+                    <div class="in"><input id="pas" type="text"/></div>
+                    <div class="in" id="login"> <button style="background-color:rgb(34,34,34);color: white;">Log in</button></div>
+                    <div><p style="color: teal;">New to H&M?  </p></div>
+                    <div class="in" id="signup"><button style="background-color:white;">Sign up</button></div>
+
+                </div> -->
+
+    <div id="container">
+      <div id="first">
+        <h1 style="font-size: 25px">Sign in</h1>
+        <p>
+          Become a member - don't miss out on deals, offers, discounts and bonus
+          vouchers.
+        </p>
       </div>
-   </body>
+      <div id="second">
+        <div class="toflex">
+          <p>Email</p>
+          <p style="color: red">*</p>
+        </div>
+        <input type="text" />
+        <div class="toflex">
+          <p>Password</p>
+          <p style="color: red">*</p>
+        </div>
+        <input id = "pas" type="text" />
+      </div>
+      <div id="sec"></div>
+      <div id="third">
+        <div class="check" id="check"><input type="checkbox" />Remember me</div>
+        <div class="check">
+          <p>Forgot password?</p>
+        </div>
+      </div>
+
+      <div id="fourth">
+        <button onclick="signIn()" id="sign">Sign in</button><br />
+       <a href="signUp.html"><button id="mem">Become a member</button></a> 
+      </div>
+      <p id="info">Membership info</p>
+    </div>
+  </body>
 </html>
+<script>
+  
+</script>
