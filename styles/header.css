@@ -6,7 +6,7 @@
 #main{
     display: grid;
     grid-template-columns:repeat(12,1fr);
-    grid-template-rows: repeat(60,1fr);
+    /* grid-template-rows: repeat(60,1fr); */
     grid-gap: 15px;
     justify-content: center;
     text-align: center;
@@ -132,8 +132,8 @@ nav ul.menu-area{
 }
 nav #display li:hover ul.menu-area{
     /* background-color: pink; */
-    width: 300%;
-    margin-left: -100%;
+    width: 250%;
+    margin-left: -60%;
     font-size: smaller;
     top:100%;
 }
@@ -229,7 +229,7 @@ a{
     /* background-color: blue; */
     visibility: hidden;
 }
-#right:hover #rightIn{
+#signin:hover #rightIn{
 
     visibility: visible;
 }
@@ -288,6 +288,7 @@ background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%222
 width: 10px;
 background-repeat: no-repeat;
 margin-right: 15px;
+margin-top: 0px;
 }
 input {
 border: transparent;
