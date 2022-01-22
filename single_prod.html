@@ -104,11 +104,11 @@
 </html>
 
 <script>
-function clicked()
-  {
-     let clickedOne = JSON.parse(localStorage.getItem("clicked_item"))
-     console.log(clickedOne)
-
+    let cart_arr =JSON.parse(localStorage.getItem("bag_items"))|| [];
+    function clicked()
+    {
+      let clickedOne = JSON.parse(localStorage.getItem("clicked_item")) ||[]
+      console.log(clickedOne)
 
      let image = document.getElementById("prodImage")
      image.src = clickedOne.img;
@@ -116,7 +116,7 @@ function clicked()
      image2.src = clickedOne.img;
 
      let price = document.getElementById("productPrice")
-     price.textContent = clickedOne.MRP
+     price.textContent = `Rs.${clickedOne.MRP}`
      let strike= document.getElementById("strikeOf")
      strike.textContent=clickedOne.strike
 
@@ -125,6 +125,26 @@ function clicked()
 
      let name = document.getElementById("productName")
      name.textContent= clickedOne.name
+
+     var cart_obj ={
+
+        name:clicked.name,
+        image: clickedOne.img,
+        price: clickedOne.MRP,
+        strike: clickedOne.strike
+     }
+        let btn = document.getElementById("addBag")
+     btn.addEventListener ("click", function()
+        {
+            cart_arr.push(cart_obj)
+            localStorage.setItem("bag_items",JSON.stringify(cart_arr));
+            window.location.href = "single_prod.html"
+        })
   }
   clicked()
+
+//   function addToBag()
+//   {
+      
+//   }
 </script>
